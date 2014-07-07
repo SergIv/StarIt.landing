@@ -1,0 +1,6 @@
+cody_landing_page_homepage:
+    path:     /landing/
+    defaults: { _controller: CodyLandingPageBundle:Default:index }
+ajax_submit:
+    pattern:  /update/data/from/ajax/call
+    defaults: { _controller: CodyLandingPageBundle:Default:ajax }

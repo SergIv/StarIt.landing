@@ -1,0 +1,19 @@
+.center {
+    text-align: center;
+}
+
+.text-case {
+    font-size:20px;
+}
+
+.panel-width {
+    width:40%;
+}
+
+.container-padding {
+    padding-top:20px;
+}
+
+.form-width {
+    max-width: 150px;
+}

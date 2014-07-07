@@ -1,0 +1,125 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    Star it!
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets "@CodyLandingPageBundle/Resources/public/css/*" filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts '@CodyLandingPageBundle/Resources/public/js/*' %}
+     <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block body %}
+    {{ ip }}
+    <div class="container container-padding">
+
+      <div class="masthead">
+        {# <h3 class="text-muted">Star it!</h3>
+{#        <ul class="nav nav-justified">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Downloads</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>#}
+      </div>
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>Star it!</h1>
+        <p class="lead">Наш Star it! позволяет пользователю (покупателю) с помощью смартфона прямо на месте события оставить свой отзыв, замечание, предложение 
+
+(любую обратную связь). А бизнесу оперативно получить и прореагировать на самые критичные замечания, а также сделать анализ (сформировать 
+
+различные отчеты, графики и т.д.) полученной обратной связи и принять решения для увеличения эффективности работы бизнеса.</p>
+        {# <p><a class="btn btn-lg btn-success" href="#" role="button">Подписаться</a></p> #}
+      </div>
+     
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4 center">
+            <h1><span class="label label-success text-case">Вы стоите на касе</span></h1>
+            <h1><span class="glyphicon glyphicon-arrow-down"></span></h1>
+          <p class="collapse" id="viewdetails1">Вы стоите на кассе. С Вами на кассе и происходит событие, которое побуждает Вас обратиться к менеджменту супермаркета (например,
+                очень приятное, вежливое, внимательное обслуживание, или наоборот обсчитали, нахамили, и т.п.). Вы берете свой смартфон, открываете 
+                приложение Star it! и сканируете QR-код на кассе (он будет предварительно там размещен), в котором, содержится информация о магазине 
+                и номере кассы, выставляете звездочки (оценку), пишете комментарий, возможно делаете фото и отправляете на сервер. На сервере данные 
+                обрабатываются и попадают в хранилище данных. Менеджмент регулярно имеет возможность проанализировать информацию и узнать кто 
+                самый лучший и самый худший кассир, видит картину удовлетворенности клиентов работой касс в супермаркетах. </p>
+          <p><a class="btn" data-toggle="collapse" data-target="#viewdetails1">Описание &raquo;</a></p>
+        </div>
+        <div class="col-lg-4 center">
+          <h1><span class="label label-success text-case">Вы выбираете товар</span></h1>
+          <h1><span class="glyphicon glyphicon-arrow-down"></span></h1>
+          <p class="collapse" id="viewdetails2">Вы выбираете товар в отделе. Вам необходима консультация продавца. Нужного продавца рядом нет уже полчаса (и даже после обращения 
+            в инфо-центр), а другие продавцы помочь Вам не могут или не хотят. Вы на своем смартфоне открываете приложение Star it! сканируете 
+            QR-код на отделе, выбираете Вашу ситуацию из списка, пишете комментарий, возможно, делаете фото и отправляете. На сервере 
+            данные обрабатываются, менеджеру отправляется уведомление (sms, push-notification и/или email и т.д.). Систему можно настроить так, 
+            чтобы менеджер магазина мгновенно получал Ваше уведомление и направлял продавца в отдел. Также менеджмент сможет регулярно 
+            иметь актуальный отчет по ситуации (загрузке отделов) глазами клиента, видеть картину удовлетворенности клиентов работой отделов 
+            супермаркетах. В результате чего он может, например, меняет нерадивого продавца, добавляет помощника, делает перестановку 
+            продавцов-консультантов в определенные часы, проводит обучение продавцов соседних отделов и т.д.</p>
+          <p><a class="btn" data-toggle="collapse" data-target="#viewdetails2">Описание &raquo;</a></p>
+       </div>
+        <div class="col-lg-4 center">
+            <h1><span class="label label-success text-case">Вы хотите оставить отзыв</span></h1>
+          <h1><span class="glyphicon glyphicon-arrow-down"></span></h1>
+          <p class="collapse" id="viewdetails3">Вы хотите оставить отзыв о товаре. Вы приобрели товар (заправились) и покинули место покупки. Затем обнаружили, что товар
+                достоин обратной связи (очень хороший или наоборот плохой). На своем смартфоне Вы открываете приложение Star it!, вводите код 
+                из чека (сканирует QR-код на чеке), выставляете оценку, пишете комментарий, возможно, делаете фото чека и товара и нажимаете 
+                кнопку «отправить». На сервере данные обрабатываются и попадают в хранилище данных. Менеджмент регулярно имеет актуальный отчет 
+                по качеству отпущенных товаров в разных супермаркетах, качеству залитого топлива на разных заправках и т.д. </p>
+          <p><a class="btn" data-toggle="collapse" data-target="#viewdetails3">Описание &raquo;</a></p>
+        </div>
+      </div>
+      <div class="panel panel-default panel-width">
+
+            <div class="panel-body">
+              Хотите получить бесплатную версию продукта первыми 
+                после его выпуска?
+                Или может быть оставить свой экспертный отзыв о 
+                полезности нашего сервиса Star it!?
+                
+                
+            {{ form_start(form) }}
+                {{ form_errors(form) }}
+
+                <div class="form-group">
+                    {{ form_label(form.email) }}
+                    {{ form_errors(form.email) }}
+                    {{ form_widget(form.email,  {'attr': {'class': 'form-control form-width'}}) }}
+                </div>
+
+                <div id = "submit-button">
+                    {{ form_widget(form.save, { 'label': 'Подписаться' }) }}
+                </div>
+
+            {{ form_end(form) }}
+                
+            </div>
+            
+            
+          </div>
+      <!-- Site footer -->
+      <div class="footer">
+        <p>&copy; Company 2014 </p>
+      </div>
+      
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+{% endblock %}
+
+

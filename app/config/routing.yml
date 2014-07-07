@@ -1,0 +1,4 @@
+cody_landing_page:
+    resource: "@CodyLandingPageBundle/Resources/config/routing.yml"
+    prefix:   /
+
