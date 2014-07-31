@@ -16,7 +16,7 @@ class DefaultController extends Controller
         
         $form = $this->createFormBuilder($data)
                 ->add('email', 'email')->add('save', 'submit', array(
-    'attr' => array('class' => 'btn btn-primary sign-submit')))->getForm();
+    'attr' => array('class' => 'btn btn-primary', 'id' => 'sign-submit')))->getForm();
         
         $form->handleRequest($request);
         

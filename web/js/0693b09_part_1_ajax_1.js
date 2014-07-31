@@ -1,3 +1,1 @@
-$( "#viewdetails3" ).click(function() {
-  alert( "Handler for .click() called." );
-});
+$('.sign-submit').click(function(){alert("lol");});

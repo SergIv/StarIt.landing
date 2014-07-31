@@ -63,6 +63,7 @@ assetic:
                 - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/collapse.js'
                 - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/carousel.js'
                 - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/affix.js'
+                - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/bootstrap-rating-input.min.js'
             filters: [?yui_js]
         bootstrap_less:
             inputs:
